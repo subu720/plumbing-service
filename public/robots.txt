@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Reference the sitemap location
-Sitemap: https://plumbing-service-cyan.vercel.app/sitemap.xml
+Sitemap: https://patraplumbingsolutions.vercel.app/sitemap.xml
