@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logoImg from '../../assets/patra-logo.png';
 
 interface LogoProps {
   className?: string;
@@ -7,7 +8,7 @@ interface LogoProps {
 
 export default function Logo({ className = '', variant = 'dark' }: LogoProps) {
   const [imgError, setImgError] = useState(false);
-  const imgSrc = '/src/assets/patra-logo.png';
+  const imgSrc = logoImg;
 
   const isLight = variant === 'light';
 
