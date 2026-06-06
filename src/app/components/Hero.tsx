@@ -126,22 +126,22 @@ export function Hero({ onViewPricing }: { onViewPricing: () => void }) {
             }}
           >
             <motion.div
-              className="absolute -top-8 right-0 z-20 w-64 rounded-[2rem] border border-white/20 bg-white/10 p-5 shadow-2xl backdrop-blur-xl text-white"
+              className="absolute -top-6 right-2 sm:-top-8 sm:right-0 z-20 w-48 sm:w-64 rounded-[1.5rem] sm:rounded-[2rem] border border-white/20 bg-white/10 p-3 sm:p-5 shadow-2xl backdrop-blur-xl text-white"
               initial={{ opacity: 0, y: -20, rotate: -5 }}
               animate={{ opacity: 1, y: [0, -6, 0], rotate: [-5, 5, -5] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               style={{ transformStyle: 'preserve-3d' }}
             >
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-2 sm:mb-4">
                 <div>
-                  <p className="text-[0.65rem] uppercase tracking-[0.3em] text-cyan-200/80">Patra Platinum</p>
-                  <h3 className="text-lg font-semibold text-white">Luxury Service Card</h3>
+                  <p className="text-[0.55rem] sm:text-[0.65rem] uppercase tracking-[0.3em] text-cyan-200/80">Patra Platinum</p>
+                  <h3 className="text-sm sm:text-lg font-semibold text-white">Luxury Service Card</h3>
                 </div>
-                <div className="h-10 w-10 rounded-2xl bg-cyan-500/20 flex items-center justify-center text-cyan-200">
-                  <Zap className="w-5 h-5" />
+                <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-xl sm:rounded-2xl bg-cyan-500/20 flex items-center justify-center text-cyan-200 flex-shrink-0">
+                  <Zap className="w-4 h-4 sm:w-5 h-5" />
                 </div>
               </div>
-              <div className="space-y-2 text-sm text-slate-200">
+              <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-slate-200">
                 <p>Priority arrival within 30 min*</p>
                 <p>Dedicated service manager</p>
               </div>

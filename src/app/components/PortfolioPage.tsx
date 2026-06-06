@@ -113,7 +113,7 @@ export function PortfolioPage({ onBack }: { onBack: () => void }) {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="flex items-center justify-between mb-12"
+          className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-12"
         >
           <div>
             <h1 className="text-4xl md:text-5xl font-semibold mb-4">
@@ -129,7 +129,7 @@ export function PortfolioPage({ onBack }: { onBack: () => void }) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onBack}
-            className="flex items-center gap-2 px-6 py-3 rounded-full bg-slate-200 text-slate-900 font-semibold hover:bg-slate-300 transition-colors"
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-slate-200 text-slate-900 font-semibold hover:bg-slate-300 transition-colors self-start sm:self-auto flex-shrink-0"
           >
             <ArrowLeft className="w-5 h-5" />
             Back

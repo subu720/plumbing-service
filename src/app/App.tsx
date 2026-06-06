@@ -9,6 +9,7 @@ import { ContactSection } from './components/ContactSection';
 import { TrustElements } from './components/TrustElements';
 import { WaterDroplet } from './components/WaterDroplet';
 import Logo from './components/Logo';
+import { Menu, X } from 'lucide-react';
 
 function HomePage({ onViewPricing, onExplore, onExplorePortfolio }: { onViewPricing: (serviceId?: string) => void; onExplore: () => void; onExplorePortfolio: () => void }) {
   return (
@@ -26,6 +27,7 @@ export default function App() {
   const [scrollY, setScrollY] = useState(0);
   const [route, setRoute] = useState(() => window.location.pathname);
   const [selectedPricingService, setSelectedPricingService] = useState<string | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -78,6 +80,7 @@ export default function App() {
               onClick={(event) => {
                 event.preventDefault();
                 navigate('/');
+                setIsMenuOpen(false);
               }}
               className="flex items-center gap-2"
             >
@@ -85,7 +88,8 @@ export default function App() {
             </a>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
             <a
               href="/services"
               onClick={(event) => {
@@ -106,7 +110,7 @@ export default function App() {
             >
               Our Work
             </a>
-              <a
+            <a
               href="/pricing"
               onClick={(event) => {
                 event.preventDefault();
@@ -118,12 +122,68 @@ export default function App() {
             </a>
             <a
               href="tel:+919959910140"
-              className="px-5 py-2 rounded-lg bg-[var(--plumbing-orange)] text-white hover:bg-[var(--plumbing-orange)]/90 transition-all shadow-lg hover:shadow-xl text-sm md:text-base"
+              className="px-5 py-2 rounded-lg bg-[var(--plumbing-orange)] text-white hover:bg-[var(--plumbing-orange)]/90 transition-all shadow-lg hover:shadow-xl text-sm md:text-base font-semibold"
             >
               Call Now
             </a>
           </div>
+
+          {/* Mobile Navigation controls */}
+          <div className="flex md:hidden items-center gap-3">
+            <a
+              href="tel:+919959910140"
+              className="px-4 py-2 rounded-lg bg-[var(--plumbing-orange)] text-white hover:bg-[var(--plumbing-orange)]/90 transition-all shadow-md text-sm font-semibold"
+            >
+              Call Now
+            </a>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-gray-700 hover:text-[var(--plumbing-blue)] focus:outline-none"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Navigation Dropdown */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4 shadow-lg animate-in slide-in-from-top duration-200">
+            <a
+              href="/services"
+              onClick={(event) => {
+                event.preventDefault();
+                navigate('/services');
+                setIsMenuOpen(false);
+              }}
+              className="text-base text-gray-700 hover:text-[var(--plumbing-blue)] hover:bg-slate-50 p-2 rounded-lg transition-all font-medium"
+            >
+              Services
+            </a>
+            <a
+              href="/#our-work"
+              onClick={(event) => {
+                event.preventDefault();
+                navigate('/', '#our-work');
+                setIsMenuOpen(false);
+              }}
+              className="text-base text-gray-700 hover:text-[var(--plumbing-blue)] hover:bg-slate-50 p-2 rounded-lg transition-all font-medium"
+            >
+              Our Work
+            </a>
+            <a
+              href="/pricing"
+              onClick={(event) => {
+                event.preventDefault();
+                navigate('/pricing');
+                setIsMenuOpen(false);
+              }}
+              className="text-base text-gray-700 hover:text-[var(--plumbing-blue)] hover:bg-slate-50 p-2 rounded-lg transition-all font-medium"
+            >
+              Pricing
+            </a>
+          </div>
+        )}
       </nav>
 
       {/* Main Content */}

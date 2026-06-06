@@ -37,7 +37,7 @@ export function PricingPage({ selectedServiceId }: { selectedServiceId?: string 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="rounded-[2rem] bg-white border border-slate-200/60 p-10 shadow-2xl shadow-slate-100"
+            className="rounded-[2rem] bg-white border border-slate-200/60 p-6 sm:p-10 shadow-2xl shadow-slate-100"
           >
             <div className="flex flex-col gap-4 mb-10 sm:flex-row sm:items-end sm:justify-between">
               <div>
@@ -99,15 +99,15 @@ export function PricingPage({ selectedServiceId }: { selectedServiceId?: string 
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="rounded-[2rem] border border-slate-200/60 bg-white p-8 shadow-2xl shadow-slate-100">
+            <div className="rounded-[2rem] border border-slate-200/60 bg-white p-4 sm:p-8 shadow-2xl shadow-slate-100">
               <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 mb-6">
                 <div className="text-sm uppercase tracking-[0.3em] text-[var(--plumbing-blue)] font-semibold mb-2">Selected service</div>
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div>
                     <h3 className="text-2xl font-semibold text-slate-900">{selectedItem.title}</h3>
                     <p className="mt-2 text-sm text-slate-600">Fast, transparent pricing for the service you selected.</p>
                   </div>
-                  <div className="rounded-3xl bg-[var(--plumbing-blue)]/10 px-4 py-3 text-2xl font-semibold text-[var(--plumbing-blue)]">₹{selectedItem.price}</div>
+                  <div className="rounded-3xl bg-[var(--plumbing-blue)]/10 px-4 py-3 text-2xl font-semibold text-[var(--plumbing-blue)] self-start sm:self-auto">₹{selectedItem.price}</div>
                 </div>
               </div>
               <div className="inline-flex items-center gap-3 mb-6 rounded-full bg-slate-100 px-4 py-3 text-slate-700 font-semibold text-sm">
