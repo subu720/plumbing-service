@@ -194,8 +194,8 @@ export function ContactSection() {
               },
               {
                 icon: MapPin,
-                title: 'Local Service',
-                description: 'Get connected with nearby technicians for quicker arrival times.',
+                title: 'Serving Kodad & Surrounding Areas',
+                description: 'Get connected with local plumbers serving Kodad, Suryapet, Khammam, Huzurnagar, Munagala, and Chilkur.',
               },
             ].map((feature, index) => (
               <motion.div

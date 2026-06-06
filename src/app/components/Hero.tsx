@@ -70,7 +70,7 @@ export function Hero({ onViewPricing }: { onViewPricing: () => void }) {
           </h1>
 
           <p className="text-base sm:text-xl text-slate-600 mb-8 leading-relaxed">
-            Book expert plumbers in seconds. Track them in real-time. Get your plumbing fixed right the first time with premium service, backed by our satisfaction guarantee.
+            Book expert plumbers in seconds in Kodad and surrounding areas. Track them in real-time. Get your plumbing fixed right the first time with premium service, backed by our satisfaction guarantee.
           </p>
 
           {/* CTA Buttons */}

@@ -49,10 +49,10 @@ export function Services({ onViewPricing, onExplore }: { onViewPricing: (service
             Our Services
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4">
-            Premium plumbing care for every home.
+            Premium plumbing care in Kodad for every home.
           </h2>
           <p className="mx-auto max-w-2xl text-gray-600 text-base md:text-lg leading-relaxed">
-            Choose the service that best fits your needs and contact us for a fast appointment.
+            Choose the service that best fits your needs and contact us for a fast appointment in Kodad and surrounding areas.
           </p>
         </motion.div>
 
