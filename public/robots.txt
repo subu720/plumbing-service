@@ -4,3 +4,4 @@ Allow: /
 
 # Reference the sitemap location
 Sitemap: https://patraplumbingsolutions.vercel.app/sitemap.xml
+Sitemap: https://patraplumbingsolutions.vercel.app/sitemap_index.xml
